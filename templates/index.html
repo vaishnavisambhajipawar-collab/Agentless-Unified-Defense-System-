@@ -1,94 +1,225 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>FAKE URL DETECTATION</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  </head>
-  <body>
-   <!-- hero - start -->
-<div class="bg-white pb-6 sm:pb-8 lg:pb-12">
-  <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
-    <header class="mb-4 flex items-center justify-between py-4 md:py-8">
-      <!-- logo - start -->
-      <a href="/" class="inline-flex items-center gap-2.5 text-2xl font-bold text-black md:text-3xl" aria-label="logo">
-        <svg width="95" height="94" viewBox="0 0 95 94" class="h-auto w-6 text-indigo-500" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-          <path d="M96 0V47L48 94H0V47L48 0H96Z" />
-        </svg>
 
-        Phishing Website Detection 
-      </a>
-      <!-- logo - end -->
+    <title>FAKE URL DETECTION</title>
 
-      <!-- nav - start -->
-      <nav class="hidden gap-12 lg:flex">
-    
-        <a href="#" class="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700">GO BACK</a>
-        <a href="#" class="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700">Search</a>
-        <a href="#" class="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700">About</a>
-      </nav>
-      <!-- nav - end -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous">
+</head>
 
-      <!-- buttons - start -->
-      <a href="#" class="hidden rounded-lg bg-gray-200 px-8 py-3 text-center text-sm font-semibold text-gray-500 outline-none ring-indigo-300 transition duration-100 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base lg:inline-block">Learn more</a>
+<body class="bg-black text-white min-h-screen">
 
-      <button type="button" class="inline-flex items-center gap-2 rounded-lg bg-gray-200 px-2.5 py-2 text-sm font-semibold text-gray-500 ring-indigo-300 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base lg:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
-          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
-        </svg>
+    <!-- Main section -->
+    <div class="bg-black min-h-screen">
 
-        Menu
-      </button>
-      <!-- buttons - end -->
-    </header>
-<div class="bg-white py-6 sm:py-8 lg:py-12">
-  <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
-    <!-- text - start -->
-    <div class="mb-10 md:mb-16">
-      <h2 class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">Phishing Website Detection</h2>
+        <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
 
-      <p class="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">Check Phishing Website By entering the URL</p><br>
+            <!-- Header -->
+            <header class="mb-4 flex items-center justify-between py-4 md:py-8">
 
-       <p class="mx-auto max-w-screen-md text-center  md:text-lg text-success">{{predict}}</p>
+                <!-- Logo -->
+                <a href="/"
+                    class="inline-flex items-center gap-2.5 text-2xl font-bold text-white md:text-3xl"
+                    aria-label="logo">
+
+                    <svg width="95" height="94" viewBox="0 0 95 94"
+                        class="h-auto w-6 text-green-500"
+                        fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+
+                        <path d="M96 0V47L48 94H0V47L48 0H96Z" />
+
+                    </svg>
+
+                    Phishing Website Detection
+
+                </a>
+
+                <!-- Navigation -->
+                <nav class="hidden gap-12 lg:flex">
+
+                    <a href="#"
+                        class="text-lg font-semibold text-gray-300 transition duration-100 hover:text-green-400">
+                        GO BACK
+                    </a>
+
+                    <a href="#"
+                        class="text-lg font-semibold text-gray-300 transition duration-100 hover:text-green-400">
+                        Search
+                    </a>
+
+                    <a href="#"
+                        class="text-lg font-semibold text-gray-300 transition duration-100 hover:text-green-400">
+                        About
+                    </a>
+
+                </nav>
+
+                <!-- Learn more button -->
+                <a href="#"
+                    class="hidden rounded-lg border border-green-500 bg-green-500/10 px-8 py-3
+                    text-center text-sm font-semibold text-green-400
+                    transition duration-100 hover:bg-green-500 hover:text-black
+                    md:text-base lg:inline-block">
+                    Learn more
+                </a>
+
+                <!-- Mobile menu -->
+                <button type="button"
+                    class="inline-flex items-center gap-2 rounded-lg
+                    border border-green-500 bg-green-500/10 px-2.5 py-2
+                    text-sm font-semibold text-green-400
+                    hover:bg-green-500 hover:text-black
+                    md:text-base lg:hidden">
+
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="h-6 w-6"
+                        viewBox="0 0 20 20"
+                        fill="currentColor">
+
+                        <path fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z
+                            M3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1z
+                            M3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                            clip-rule="evenodd" />
+
+                    </svg>
+
+                    Menu
+
+                </button>
+
+            </header>
+
+
+            <!-- Content -->
+            <div class="py-6 sm:py-8 lg:py-12">
+
+                <!-- Heading -->
+                <div class="mb-10 md:mb-16">
+
+                    <h2 class="mb-4 text-center text-2xl font-bold
+                        text-white md:mb-6 lg:text-3xl">
+
+                        Phishing Website Detection
+
+                    </h2>
+
+                    <p class="mx-auto max-w-screen-md text-center
+                        text-gray-400 md:text-lg">
+
+                        Check Phishing Website By entering the URL
+
+                    </p>
+
+                    <br>
+
+                    <!-- Prediction result -->
+                    <p class="mx-auto max-w-screen-md text-center
+                        md:text-lg text-green-400">
+
+                        {{predict}}
+
+                    </p>
+
+                </div>
+
+
+                <!-- Search box -->
+                <div class="mx-auto max-w-screen-md
+                    rounded-2xl border-2 border-green-500
+                    bg-green-500/5 p-6
+                    shadow-lg shadow-green-500/20
+                    sm:p-8">
+
+                    <h3 class="mb-6 text-xl font-semibold text-green-400">
+                        Check a Website
+                    </h3>
+
+
+                    <!-- Form -->
+                    <form class="grid gap-5"
+                        method="POST"
+                        action="/">
+
+                        <div>
+
+                            <label for="url"
+                                class="mb-3 inline-block text-sm
+                                font-semibold text-gray-200 sm:text-base">
+
+                                Enter Website URL
+
+                            </label>
+
+                            <!-- URL INPUT -->
+                            <input
+                                name="url"
+                                id="url"
+                                type="text"
+                                placeholder="https://example.com"
+                                class="w-full rounded-xl
+                                border-2 border-green-500
+                                bg-black px-4 py-4
+                                text-white placeholder-gray-500
+                                outline-none
+                                transition duration-200
+                                focus:border-green-400
+                                focus:ring-2 focus:ring-green-400/40">
+
+                        </div>
+
+
+                        <!-- Submit button -->
+                        <div>
+
+                            <button
+                                type="submit"
+                                class="rounded-xl
+                                bg-green-500
+                                px-8 py-3
+                                text-center
+                                text-sm font-bold
+                                text-black
+                                transition duration-200
+                                hover:bg-green-400
+                                focus:outline-none
+                                focus:ring-2
+                                focus:ring-green-400
+                                active:bg-green-600
+                                md:text-base">
+
+                                Check URL
+
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+                <!-- Search box end -->
+
+            </div>
+
+        </div>
+
     </div>
-    <!-- text - end -->
 
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous">
+    </script>
 
-    
-    <!-- form - start -->
-    <form class="mx-auto grid max-w-screen-md gap-4 sm:grid-cols-2" method="POST" action="/">
-      
+</body>
 
-     
-
-      <div class="sm:col-span-2">
-        <label for="url" class="mb-2 inline-block text-sm text-gray-800 sm:text-base">Enter Website URL</label>
-        <input name="url" id="url" type="text" class="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring" />
-      </div>
-
-     
-
-      <div class="flex items-center justify-between sm:col-span-2">
-        <button class="inline-block rounded-lg bg-indigo-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base">Submit</button>
-
-       
-      </div>
-
-    </form>
-    <!-- form - end -->
-  </div>
-</div>
-    
-  </div>
-</div>
-<!-- hero - end -->
-
-
-
-      
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  </body>
 </html>
